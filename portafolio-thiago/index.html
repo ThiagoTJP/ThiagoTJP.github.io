@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Poletti | Desarrollador & Analista IT</title>
+
+    <!-- Fuente de Google: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Conexion estilos -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="header-top container">
+  
+            <h1 class="logo">thiago.init()</h1>
+
+            <!-- Iconos navbar sociales -->
+            <div class="social-links">
+                <a href="https://github.com/ThiagoTJP?tab=repositories" target="_blank" title="GitHub"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/thiago-poletti/" target="_blank" title="LinkedIn"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:thiago.poletti.j@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="assets/ThiagoPoletti_CV_Desarrollador.pdf" target="_blank" class="cv-link">CV</a>
+            </div>
+
+            <!-- Banderas  Idioma  -->
+            <div class="language-selector">
+                <button id="btn-es" class="flag-btn active" title="Español">
+                    <img src="assets/bandera_esp.png" alt="ES">
+                </button>
+                <button id="btn-en" class="flag-btn" title="English">
+                    <img src="assets/bandera_ingles.png" alt="EN">
+                </button>
+            </div>
+            <button id="btn-terminal" class="btn-consola" title="Modo Consola">
+                <i class="fa-solid fa-desktop"></i> Modo Linux
+            </button>
+
+        </div>
+
+        <div class="header-bottom container">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a></li>
+                    <li><a href="#proyectos" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+                    <li><a href="#habilidades" data-es="Habilidades" data-en="Skills">Habilidades</a></li>
+                    <li><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+
+        <div id="consola-linux" class="terminal-container" style="display: none;">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">thiago@portfolio: ~</span>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div class="terminal-input-line">
+                    <span class="prompt">thiago@portfolio:~$</span>
+                    <input type="text" id="terminal-input" autocomplete="off">
+                </div>
+            </div>
+        </div>
+        <!-- Sección Sobre mí -->
+        <section id="sobre-mi" class="hero container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 data-es="Hola, soy <span class='highlight'>Thiago Poletti</span>"
+                        data-en="Hi, I'm <span class='highlight'>Thiago Poletti</span>">
+                        Hola, soy <span class="highlight">Thiago Poletti</span>
+                    </h2>
+                    <h3 data-es="Desarrollador Full Stack & Analista IT" data-en="Full Stack Developer & IT Analyst">
+                        Desarrollador Full Stack & Analista IT
+                    </h3>
+                    <p data-es="Técnico Universitario en Programación graduado, con base sólida en lógica, algoritmos y bases de datos relacionales, y experiencia práctica en desarrollo Full Stack aplicada en proyectos propios (Veflo Deco, GGBienestar, Building). Busco un primer rol como desarrollador donde pueda seguir creciendo, aportando compromiso y capacidad de aprendizaje."
+                        data-en="Graduated University Technician in Programming, with a solid foundation in logic, algorithms, and relational databases, and practical Full Stack development experience applied to my own projects (Veflo Deco, GGBienestar, Building). I am looking for my first role as a developer where I can continue growing, contributing commitment and a strong capacity to learn.">
+                        Técnico Universitario en Programación graduado, con base sólida en lógica, algoritmos y bases de
+                        datos relacionales, y experiencia práctica en desarrollo Full Stack aplicada en proyectos
+                        propios (Veflo Deco, GGBienestar, Building). Busco un primer rol como desarrollador donde pueda
+                        seguir creciendo, aportando compromiso y capacidad de aprendizaje.
+                    </p>
+
+                    <!-- Fila contacto rápido -->
+                    <div class="hero-contacto-rapido">
+                        <span><i class="fa-solid fa-location-dot"></i> Don Torcuato, Buenos Aires, Argentina</span>
+                        <span><i class="fa-solid fa-phone"></i> +54 9 11 23877790</span>
+                        <span><i class="fa-solid fa-envelope"></i> thiago.poletti.j@gmail.com</span>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <a href="#proyectos" class="btn btn-primary" data-es="Ver mis proyectos"
+                            data-en="View my projects">Ver mis proyectos</a>
+                        <a href="#contacto" class="btn btn-secondary" data-es="Contactame"
+                            data-en="Contact me">Contactame</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/fotocv.png" alt="Foto de Thiago Poletti">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Proyectos -->
+        <section id="proyectos" class="seccion-proyectos container">
+            <h2 class="titulo-seccion" data-es="Mis Proyectos" data-en="My Projects">Mis Proyectos</h2>
+
+            <!-- Botones de Filtro -->
+            <div class="filtros-proyectos">
+                <button class="btn-filtro active" data-filtro="todos" data-es="Todos" data-en="All">Todos</button>
+                <button class="btn-filtro" data-filtro="desarrollo" data-es="Desarrollo Web"
+                    data-en="Web Development">Desarrollo Web</button>
+                <button class="btn-filtro" data-filtro="soporte" data-es="Soporte e Infraestructura"
+                    data-en="Infrastructure & Support">Soporte e Infraestructura</button>
+                <button class="btn-filtro" data-filtro="qa" data-es="QA Testing" data-en="QA Testing">QA
+                    Testing</button>
+            </div>
+
+            <!-- Grilla de Tarjetas -->
+            <div class="grilla-proyectos">
+
+                <!-- Tarjeta 1: Veflo Deco -->
+                <div class="tarjeta-proyecto" data-categoria="desarrollo qa">
+                    <div class="proyecto-imagen">
+                        <img src="assets/veflo.png" alt="Veflo Deco">
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Veflo Deco</h3>
+                        <p class="proyecto-desc"
+                            data-es="Página web E-commerce completa. Cuenta con carrito de compras y panel de administración."
+                            data-en="Complete E-commerce website. Features a shopping cart and an admin panel.">Página
+                            web E-commerce completa. Cuenta con carrito de compras y panel de administración.</p>
+                        <div class="proyecto-tags">
+                            <span class="tag-react"><i class="fa-brands fa-react"></i> React</span>
+                            <span class="tag-node"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                            <span class="tag-mongo"><i class="fa-solid fa-database"></i> MongoDB</span>
+                            <span class="tag-mp"><i class="fa-solid fa-credit-card"></i> MercadoPago</span>
+                        </div>
+                        <div class="proyecto-links">
+                            <a href="https://veflo.com.ar/" target="_blank" class="btn btn-sm btn-primary"
+                                data-es="<i class='fa-solid fa-globe'></i> Visitar página web"
+                                data-en="<i class='fa-solid fa-globe'></i> Visit Website"><i
+                                    class="fa-solid fa-globe"></i> Visitar página web</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2: Building -->
+                <div class="tarjeta-proyecto" data-categoria="desarrollo qa">
+                    <div class="proyecto-imagen">
+                        <img src="assets/building.png" alt="Building">
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Building</h3>
+                        <p class="proyecto-desc"
+                            data-es="Aplicación web (PWA) para seguimiento de entrenamientos. Registrá rutinas, series, pesos y visualizá tu progreso."
+                            data-en="Web application (PWA) for workout tracking. Log routines, sets, weights, and visualize your progress.">
+                            Aplicación web (PWA) para seguimiento de entrenamientos. Registrá rutinas, series, pesos y
+                            visualizá tu progreso.</p>
+                        <div class="proyecto-tags">
+                            <span class="tag-react"><i class="fa-brands fa-react"></i> React</span>
+                            <span class="tag-vite"><i class="fa-solid fa-bolt"></i> Vite</span>
+                            <span class="tag-firebase"><i class="fa-solid fa-fire"></i> Firebase</span>
+                        </div>
+                        <div class="proyecto-links">
+                            <a href="https://building-b21eb.web.app/" target="_blank" class="btn btn-sm btn-primary"
+                                data-es="Ver Proyecto" data-en="View Project">Ver Proyecto</a>
+                            <a href="https://github.com/ThiagoTJP/building-app" target="_blank"
+                                class="btn btn-sm btn-secondary" data-es="<i class='fa-brands fa-github'></i> Código"
+                                data-en="<i class='fa-brands fa-github'></i> Code"><i class="fa-brands fa-github"></i>
+                                Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 5: GGBienestar  -->
+                <div class="tarjeta-proyecto" data-categoria="desarrollo qa">
+                    <div class="proyecto-imagen">
+                        <img src="assets/ggbienestar.png" alt="GGBienestar">
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>GGBienestar</h3>
+                        <p class="proyecto-desc"
+                            data-es="Sistema de gestión de turnos para estética, incluyendo una sección dedicada al control de pagos."
+                            data-en="Appointment management system for a beauty center, including a dedicated section for payment tracking.">
+                            Sistema de gestión de turnos para estética, incluyendo una sección dedicada al control de
+                            pagos.</p>
+                        <div class="proyecto-tags">
+                            <span class="tag-next"><i class="fa-solid fa-n"></i> Next.js</span>
+                            <span class="tag-react"><i class="fa-brands fa-react"></i> Tailwind</span>
+                            <span class="tag-postgres"><i class="fa-solid fa-database"></i> Supabase</span>
+                        </div>
+                        <div class="proyecto-links">
+                            <a href="https://github.com/ThiagoTJP/GGBienestar" target="_blank"
+                                class="btn btn-sm btn-secondary"
+                                data-es="<i class='fa-regular fa-image'></i> Ver Capturas / Demo"
+                                data-en="<i class='fa-regular fa-image'></i> View Screenshots / Demo"><i
+                                    class="fa-regular fa-image"></i> Ver Capturas / Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: VitalClinic API -->
+                <div class="tarjeta-proyecto" data-categoria="desarrollo qa">
+                    <div class="proyecto-imagen">
+                        <img src="assets/fondo_negro_liso.png" alt="VitalClinic">
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>VitalClinic API</h3>
+                        <p class="proyecto-desc"
+                            data-es="Desarrollo de API REST para la gestión de turnos médicos integrando un sistema de base de datos relacional."
+                            data-en="REST API development for medical appointment management integrating a relational database system.">
+                            Desarrollo de API REST para la gestión de turnos médicos integrando un sistema de base de
+                            datos relacional.</p>
+                        <div class="proyecto-tags">
+                            <span class="tag-java"><i class="fa-brands fa-java"></i> Java 17</span>
+                            <span class="tag-spring"><i class="fa-solid fa-leaf"></i> Spring Boot 3</span>
+                            <span class="tag-sql"><i class="fa-solid fa-database"></i> H2 / MySQL</span>
+                            <span class="tag-postman"><i class="fa-solid fa-rocket"></i> Postman</span>
+                        </div>
+                        <div class="proyecto-links">
+                            <a href="https://github.com/ThiagoTJP/VitalClinic-API" target="_blank"
+                                class="btn btn-sm btn-secondary"
+                                data-es="<i class='fa-brands fa-github'></i> Ver Código"
+                                data-en="<i class='fa-brands fa-github'></i> View Code"><i
+                                    class="fa-brands fa-github"></i> Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 4: Lamine Rise -->
+                <div class="tarjeta-proyecto" data-categoria="desarrollo qa">
+                    <div class="proyecto-imagen">
+                        <img src="assets/Lamine.png" alt="Lamine's Rise">
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Lamine's Rise</h3>
+                        <p class="proyecto-desc"
+                            data-es="Videojuego 2D inspirado en la historia de un joven futbolista que busca alcanzar la gloria, gestionando físicas, colisiones y animaciones."
+                            data-en="2D video game inspired by the story of a young football player seeking glory, managing physics, collisions, and animations.">
+                            Videojuego 2D inspirado en la historia de un joven futbolista que busca alcanzar la gloria,
+                            gestionando físicas, colisiones y animaciones.</p>
+                        <div class="proyecto-tags">
+                            <span class="tag-unity"><i class="fa-brands fa-unity"></i> Unity</span>
+                            <span class="tag-csharp"><i class="fa-solid fa-code"></i> C#</span>
+                        </div>
+                        <div class="proyecto-links">
+                            <a href="https://thiagouces.itch.io/lamine-rises" target="_blank"
+                                class="btn btn-sm btn-primary" data-es="<i class='fa-solid fa-gamepad'></i> Jugar"
+                                data-en="<i class='fa-solid fa-gamepad'></i> Play"><i class="fa-solid fa-gamepad"></i>
+                                Jugar</a>
+                            <a href="https://github.com/ThiagoTJP/Lamine-sRise" target="_blank"
+                                class="btn btn-sm btn-secondary" data-es="<i class='fa-brands fa-github'></i> Código"
+                                data-en="<i class='fa-brands fa-github'></i> Code"><i class="fa-brands fa-github"></i>
+                                Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 6: Simulación de Red -->
+                <div class="tarjeta-proyecto" data-categoria="soporte">
+                    <div class="proyecto-imagen">
+                        <img src="assets/cisco.png" alt="Simulacion de red">
+                    </div>
+                    <div class="proyecto-info">
+                        <h3 data-es="Infraestructura de Red" data-en="Network Infrastructure">Infraestructura de Red
+                        </h3>
+                        <p class="proyecto-desc"
+                            data-es="Diseño, implementación y configuración de una red corporativa simulada (LAN/WAN y enrutamiento) en Cisco Packet Tracer."
+                            data-en="Design, implementation, and configuration of a simulated corporate network (LAN/WAN and routing) in Cisco Packet Tracer.">
+                            Diseño, implementación y configuración de una red corporativa simulada (LAN/WAN y
+                            enrutamiento) en Cisco Packet Tracer.</p>
+                        <div class="proyecto-tags">
+                            <span style="background-color: #049fd9;"><i class="fa-solid fa-network-wired"></i> Cisco
+                                PT</span>
+                            <span style="background-color: #475569;"><i class="fa-solid fa-server"></i> Redes</span>
+                        </div>
+                        <div class="proyecto-links">
+                            <a href="https://github.com/ThiagoTJP/Infraestructura_redes" target="_blank"
+                                class="btn btn-sm btn-secondary"
+                                data-es="<i class='fa-brands fa-github'></i> Ver Documentación"
+                                data-en="<i class='fa-brands fa-github'></i> View Documentation"><i
+                                    class="fa-brands fa-github"></i> Ver Documentación</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 7: Proyecto QA -->
+                <div class="tarjeta-proyecto" data-categoria="qa">
+                    <div class="proyecto-imagen">
+                        <img src="assets/fondo_negro_liso.png" alt="Proyecto QA">
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>QA Testing - Igrowker</h3>
+                        <p class="proyecto-desc"
+                            data-es="Planificación y ejecución de casos de prueba, reporte de bugs y documentación de calidad utilizando Jira y Excel."
+                            data-en="Planning and execution of test cases, bug reporting, and quality documentation using Jira and Excel.">
+                            Planificación y ejecución de casos de prueba, reporte de bugs y documentación de calidad
+                            utilizando Jira y Excel.</p>
+                        <div class="proyecto-tags">
+                            <span style="background-color: #0052CC;"><i class="fa-brands fa-jira"></i> Jira</span>
+                            <span style="background-color: #1D6F42;"><i class="fa-solid fa-file-excel"></i> Excel</span>
+                            <span style="background-color: #ff5630;"><i class="fa-solid fa-bug"></i> Testing</span>
+                            <span class="tag-postman"><i class="fa-solid fa-rocket"></i> Postman</span>
+                        </div>
+                        <div class="proyecto-links">
+                            <a href="https://github.com/ThiagoTJP/Igrowker---QA-testing" target="_blank"
+                                class="btn btn-sm btn-secondary"
+                                data-es="<i class='fa-brands fa-github'></i> Ver Casos de Prueba"
+                                data-en="<i class='fa-brands fa-github'></i> View Test Cases"><i
+                                    class="fa-brands fa-github"></i> Ver Casos de Prueba</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta: Rick & Morty App -->
+                <div class="tarjeta-proyecto" data-categoria="desarrollo">
+                    <div class="proyecto-imagen">
+                        <img src="assets/rick_morty.png" alt="Rick & Morty Explorer">
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Rick & Morty Explorer</h3>
+                        <p class="proyecto-desc"
+                            data-es="App Android nativa para explorar personajes consumiendo una API REST (Retrofit2/Glide). Incluye sistema de favoritos con persistencia local mediante SQLite."
+                            data-en="Native Android app to explore characters consuming a REST API (Retrofit2/Glide). Includes a favorites system with local persistence using SQLite.">
+                            App Android nativa para explorar personajes consumiendo una API REST (Retrofit2/Glide).
+                            Incluye sistema de favoritos con persistencia local mediante SQLite.</p>
+                        <div class="proyecto-tags">
+                            <span class="tag-kotlin"><i class="fa-solid fa-code"></i> Kotlin</span>
+                            <span class="tag-android"><i class="fa-brands fa-android"></i> Android</span>
+                            <span class="tag-sqlite"><i class="fa-solid fa-database"></i> SQLite</span>
+                        </div>
+                        <div class="proyecto-links">
+                            <a href="https://youtu.be/mg0490FEfsc" target="_blank" class="btn btn-sm btn-primary"
+                                data-es="<i class='fa-brands fa-youtube'></i> Ver Demo"
+                                data-en="<i class='fa-brands fa-youtube'></i> View Demo"><i
+                                    class="fa-brands fa-youtube"></i> Ver Demo</a>
+                            <a href="https://github.com/ThiagoTJP/RickAndMortyAPI" target="_blank"
+                                class="btn btn-sm btn-secondary" data-es="<i class='fa-brands fa-github'></i> Código"
+                                data-en="<i class='fa-brands fa-github'></i> Code"><i class="fa-brands fa-github"></i>
+                                Código</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección Habilidades -->
+        <section id="habilidades" class="seccion-habilidades container">
+            <h2 class="titulo-seccion" data-es="Mis Habilidades" data-en="My Skills">Mis Habilidades</h2>
+
+            <div class="grilla-habilidades">
+
+                <!-- Desarrollo y Bases de Datos -->
+                <div class="tarjeta-habilidad">
+                    <div class="habilidad-header">
+                        <i class="fa-solid fa-code"></i>
+                        <h3 data-es="Desarrollo y Bases de Datos" data-en="Development & Databases">Desarrollo y Bases
+                            de Datos</h3>
+                    </div>
+                    <div class="habilidad-tags">
+                        <span>Java</span> <span>Kotlin</span> <span>Spring Boot</span>
+                        <span>HTML/CSS</span> <span>JSON</span> <span>MySQL</span>
+                        <span>PostgreSQL</span> <span>SQL Server</span>
+                    </div>
+                </div>
+
+                <!-- QA y Testing -->
+                <div class="tarjeta-habilidad">
+                    <div class="habilidad-header">
+                        <i class="fa-solid fa-bug"></i>
+                        <h3 data-es="QA Testing y Herramientas" data-en="QA Testing & Tools">QA Testing y Herramientas
+                        </h3>
+                    </div>
+                    <div class="habilidad-tags">
+                        <span data-es="Pruebas Funcionales" data-en="Functional Testing">Pruebas Funcionales</span>
+                        <span>Postman</span>
+                        <span>Swagger UI</span> <span>Mockito</span> <span>Git / GitHub</span>
+                        <span>Jira</span> <span>Trello</span> <span data-es="Reporte de Incidencias"
+                            data-en="Bug Reporting">Reporte de Incidencias</span>
+                    </div>
+                </div>
+
+                <!-- Soporte e Infraestructura -->
+                <div class="tarjeta-habilidad">
+                    <div class="habilidad-header">
+                        <i class="fa-solid fa-desktop"></i>
+                        <h3 data-es="Soporte y Sistemas Operativos" data-en="Support & Operating Systems">Soporte y
+                            Sistemas Operativos</h3>
+                    </div>
+                    <div class="habilidad-tags">
+                        <span>Windows</span> <span data-es="Paquete Office" data-en="Office Suite">Paquete Office</span>
+                        <span data-es="Armado/Mantenimiento PC" data-en="PC Assembly/Maintenance">Armado/Mantenimiento
+                            PC</span> <span data-es="Asistencia Remota (TeamViewer)"
+                            data-en="Remote Assistance (TeamViewer)">Asistencia Remota (TeamViewer)</span>
+                        <span data-es="Software Corporativo" data-en="Corporate Software">Software Corporativo</span>
+                        <span data-es="Gestión de Impresoras" data-en="Printer Management">Gestión de Impresoras</span>
+                    </div>
+                </div>
+
+                <!-- Redes -->
+                <div class="tarjeta-habilidad">
+                    <div class="habilidad-header">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <h3 data-es="Redes" data-en="Networking">Redes</h3>
+                    </div>
+                    <div class="habilidad-tags">
+                        <span>TCP/IP</span> <span>LAN/WAN</span> <span>Cisco IOS (Routing)</span>
+                        <span>DHCP/DNS</span> <span data-es="Diagnóstico Wifi" data-en="WiFi Diagnostics">Diagnóstico
+                            Wifi</span>
+                    </div>
+                </div>
+
+                <!-- Metodologías e Idiomas -->
+                <div class="tarjeta-habilidad">
+                    <div class="habilidad-header">
+                        <i class="fa-solid fa-users-gear"></i>
+                        <h3 data-es="Metodologías e Idiomas" data-en="Methodologies & Languages">Metodologías e Idiomas
+                        </h3>
+                    </div>
+                    <div class="habilidad-tags">
+                        <span data-es="Metodologías Ágiles" data-en="Agile Methodologies">Metodologías Ágiles</span>
+                        <span>Scrum</span> <span>Kanban</span>
+                        <span class="tag-destacado" data-es="Inglés (B1)" data-en="English (B1)">Inglés (B1)</span>
+                        <span class="tag-destacado" data-es="Español (Nativo)" data-en="Spanish (Native)">Español
+                            (Nativo)</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección Experiencia Laboral -->
+        <section id="experiencia" class="seccion-experiencia container">
+            <h2 class="titulo-seccion" data-es="Experiencia Laboral" data-en="Work Experience">Experiencia Laboral</h2>
+
+            <div class="linea-tiempo">
+
+                <!-- Trabajo 1 -->
+                <div class="item-experiencia">
+                    <div class="experiencia-fecha">11/2025 – 07/2026</div>
+                    <div class="experiencia-contenido">
+                        <h3 data-es="Soporte de Plataformas" data-en="Platform Support">Soporte de Plataformas</h3>
+                        <h4>Tercer Término SRL</h4>
+                        <ul>
+                            <li data-es="Gestión y administración de contenidos multimedia en plataformas (LMS/Video), asegurando la correcta carga, visualización y disponibilidad del servicio."
+                                data-en="Management and administration of multimedia content on platforms (LMS/Video), ensuring correct loading, visualization, and service availability.">
+                                Gestión y administración de contenidos multimedia en plataformas (LMS/Video), asegurando
+                                la correcta carga, visualización y disponibilidad del servicio.</li>
+                            <li data-es="Soporte Técnico Asociado: asistencia técnica a usuarios finales y clientes en el uso de las plataformas, diagnóstico de problemas de acceso, seguimiento de incidencias (Ticketing) y reporte de errores de integración (Bugs) utilizando Jira y Trello."
+                                data-en="Associate Technical Support: technical assistance to end-users and clients using the platforms, diagnosing access issues, issue tracking (Ticketing), and bug reporting for integration errors using Jira and Trello.">
+                                Soporte Técnico Asociado: asistencia técnica a usuarios finales y clientes en el uso de
+                                las plataformas, diagnóstico de problemas de acceso, seguimiento de incidencias
+                                (Ticketing) y reporte de errores de integración (Bugs) utilizando Jira y Trello.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Trabajo 2 -->
+                <div class="item-experiencia">
+                    <div class="experiencia-fecha" data-es="2020 – 11/2025" data-en="2020 – 11/2025">2020 – 11/2025
+                    </div>
+                    <div class="experiencia-contenido">
+                        <h3 data-es="QA & Contenidos Multimedia e-Learning"
+                            data-en="QA & e-Learning Multimedia Content">QA & Contenidos Multimedia e-Learning</h3>
+                        <h4>Tercer Término SRL</h4>
+                        <ul>
+                            <li data-es="Desarrollo técnico de cursos interactivos mediante Articulate Storyline, gestionando la lógica de navegación y la resolución de errores técnicos en el despliegue de contenidos, para clientes como YPF y Aerolíneas Argentinas, asegurando la calidad de las entregas."
+                                data-en="Technical development of interactive courses using Articulate Storyline, managing navigation logic and resolving technical errors in content deployment, for clients like YPF and Aerolíneas Argentinas, ensuring delivery quality.">
+                                Desarrollo técnico de cursos interactivos mediante Articulate Storyline, gestionando la
+                                lógica de navegación y la resolución de errores técnicos en el despliegue de contenidos,
+                                para clientes como YPF y Aerolíneas Argentinas, asegurando la calidad de las entregas.
+                            </li>
+                            <li data-es="Diagnóstico y corrección de fallos en la lógica de navegación, variables y triggers de simulaciones interactivas."
+                                data-en="Diagnosis and correction of failures in navigation logic, variables, and triggers in interactive simulations.">
+                                Diagnóstico y corrección de fallos en la lógica de navegación, variables y triggers de
+                                simulaciones interactivas.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección Educación y Certificaciones -->
+        <section id="educacion" class="seccion-educacion container">
+            <div class="educacion-grid">
+
+                <!-- Columna Educación -->
+                <div class="edu-columna">
+                    <h2 class="titulo-seccion-chico" data-es="Educación Académica" data-en="Academic Education">
+                        Educación Académica</h2>
+                    <div class="tarjeta-edu">
+                        <div class="icono-caja">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="edu-info">
+                            <h3 data-es="Tecnicatura en Programación de Sistemas"
+                                data-en="Systems Programming Technician">Tecnicatura en Programación de Sistemas</h3>
+                            <h4 data-es="Universidad de Ciencias Empresariales y Sociales (UCES)"
+                                data-en="University of Business and Social Sciences (UCES)">Universidad de Ciencias
+                                Empresariales y Sociales (UCES)</h4>
+                            <span class="edu-fecha" data-es="2022 – 2025 (Graduado)"
+                                data-en="2022 – 2025 (Graduated)">2022 – 2025 (Graduado)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Certificaciones -->
+                <div class="edu-columna">
+                    <h2 class="titulo-seccion-chico" data-es="Certificaciones" data-en="Certifications">Certificaciones
+                    </h2>
+                    <div class="lista-certificaciones">
+
+                        <!-- Certificación 1: QA -->
+                        <div class="cert-item">
+                            <i class="fa-solid fa-check-circle cert-icono"></i>
+                            <div class="cert-info">
+                                <h4 data-es="Certificación en QA" data-en="QA Certification">Certificación en QA</h4>
+                                <span>IGROWKER ISA</span>
+                                <a href="https://igrowker.com/certificate/MJ8D9FF5GOCOOQ8V" target="_blank"
+                                    class="btn-cert"
+                                    data-es="Ver certificación <i class='fa-solid fa-arrow-up-right-from-square'></i>"
+                                    data-en="View certification <i class='fa-solid fa-arrow-up-right-from-square'></i>">
+                                    Ver certificación <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Certificación 2: Google Cloud -->
+                        <div class="cert-item">
+                            <i class="fa-brands fa-google cert-icono"></i>
+                            <div class="cert-info">
+                                <h4>Google Cloud Computing Foundations</h4>
+                                <span>Google</span>
+                                <a href="https://www.skills.google/public_profiles/f47f9859-3abf-4457-b2e5-a168072fa4e7"
+                                    target="_blank" class="btn-cert"
+                                    data-es="Ver certificación <i class='fa-solid fa-arrow-up-right-from-square'></i>"
+                                    data-en="View certification <i class='fa-solid fa-arrow-up-right-from-square'></i>">
+                                    Ver certificación <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Certificación 3: UTN -->
+                        <div class="cert-item">
+                            <i class="fa-solid fa-headset cert-icono"></i>
+                            <div class="cert-info">
+                                <h4 data-es="Certificación de Mesa de Ayuda" data-en="Help Desk Certification">
+                                    Certificación de Mesa de Ayuda</h4>
+                                <span data-es="Universidad Tecnológica Nacional (UTN)"
+                                    data-en="National Technological University (UTN)">Universidad Tecnológica Nacional
+                                    (UTN)</span>
+                                <a href="https://validator.centrodeelearning.com/validator/ZPD9dWp7e4" target="_blank"
+                                    class="btn-cert"
+                                    data-es="Ver certificación <i class='fa-solid fa-arrow-up-right-from-square'></i>"
+                                    data-en="View certification <i class='fa-solid fa-arrow-up-right-from-square'></i>">
+                                    Ver certificación <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer con contacto real -->
+    <footer id="contacto" class="footer">
+        <div class="container footer-content">
+            <h1 class="logo">Thiago Poletti</h1>
+            <p class="footer-desc" data-es="Desarrollador Full Stack & Analista IT"
+                data-en="Full Stack Developer & IT Analyst">Desarrollador Full Stack & Analista IT</p>
+
+            <div class="footer-links-contacto">
+                <a href="https://github.com/ThiagoTJP?tab=repositories" target="_blank" class="btn-footer">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/thiago-poletti/" target="_blank" class="btn-footer">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="mailto:thiago.poletti.j@gmail.com" class="btn-footer">
+                    <i class="fa-solid fa-envelope"></i> thiago.poletti.j@gmail.com
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Conexión JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
